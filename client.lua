@@ -51,6 +51,18 @@ local grapeLocations = {
 	[20] = vector3(-1698.71, 2150.65, 110.41),
 }
 
+CreateThread(function()
+    vineyardBlip = AddBlipForCoord(-1929.05, 2060.13, 140.84)
+    SetBlipSprite(vineyardBlip, 93)
+    SetBlipScale(vineyardBlip, 0.6)
+    SetBlipDisplay(vineyardBlip, 4)
+    SetBlipColour(vineyardBlip, 31)
+    SetBlipAsShortRange(vineyardBlip, true)
+    BeginTextCommandSetBlipName("STRING")
+    AddTextComponentSubstringPlayerName("Marlowe Vineyard")
+    EndTextCommandSetBlipName(vineyardBlip)
+end)
+
 local function log(debugMessage)
 	print(('^6[^3qb-vineyard^6]^0 %s'):format(debugMessage))
 end
@@ -59,11 +71,11 @@ local function CreateBlip()
 	if tasking then
 		blip = AddBlipForCoord(grapeLocations[random].x,grapeLocations[random].y,grapeLocations[random].z)
 	end
-    SetBlipSprite(blip, 465)
+    SetBlipSprite(blip, 1)
     SetBlipScale(blip, 1.0)
     SetBlipAsShortRange(blip, false)
     BeginTextCommandSetBlipName("STRING")
-    AddTextComponentString("Drop Off")
+    AddTextComponentString("Pick Grapes")
     EndTextCommandSetBlipName(blip)
 end
 
