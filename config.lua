@@ -42,3 +42,14 @@ Config = {
 		}
 	}
 }
+
+Config.Locations = {
+    ["vineyard"] = {
+        ["label"] = "Marlowe Vineyard",
+        ["coords"] = vector4(-1928.99, 2060.15, 140.84, 170.77),
+        ["radius"] = 1.5,
+        ["showblip"] = true,
+        ["blipsprite"] = 93,
+        ["blipcolor"] = 31
+    },
+}
